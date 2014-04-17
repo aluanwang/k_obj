@@ -1,0 +1,11 @@
+#N canvas 694 301 450 300 10;
+#X obj 71 101 gemwin;
+#X msg 71 74 create \, 1;
+#X obj 190 70 facing;
+#X obj 190 38 gemhead;
+#X obj 38 -23 k_camera;
+#X obj 190 142 circle 0.5;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
