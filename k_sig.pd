@@ -1,0 +1,11 @@
+#N canvas 140 22 450 300 10;
+#X obj 104 126 PRINT;
+#X obj 104 42 inlet~;
+#X obj 73 208 outlet;
+#X obj 73 181 change;
+#X obj 104 94 unsig~ 1;
+#X connect 1 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 4 0 3 0;
+#X coords 0 -1 1 1 110 50 1 100 100;

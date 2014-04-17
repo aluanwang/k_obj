@@ -1,0 +1,52 @@
+#N canvas 399 281 578 487 10;
+#X obj 21 89 gemhead;
+#X obj 21 123 pix_video;
+#X obj 21 160 pix_rgba;
+#X obj 21 261 pix_texture;
+#X obj 142 323 gemwin;
+#X obj 90 50 loadbang;
+#X msg 111 280 destroy;
+#X msg 92 76 dimen 1920 1080;
+#X obj 105 124 hsl 80 15 1 2 0 0 empty empty GAIN 5 8 0 10 -262144
+-1 -1 0 1;
+#X obj 21 290 rectangle 7.1 4;
+#X obj 105 143 hsl 80 15 1 5 0 0 empty empty ZOOM 5 8 0 10 -262144
+-1 -1 0 1;
+#X msg 119 241 710 400;
+#X msg 170 240 888 500;
+#X msg 227 241 1066 600;
+#X msg 218 214 1243 700;
+#X obj 102 162 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 102 190 sel 0 1 2 3 4;
+#X msg 170 278 dimen \$1 \$2 \, create \, 1;
+#X msg 224 116 dialog;
+#X obj 172 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 22 227 scale 1;
+#X obj 21 203 pix_contrast;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 21 0;
+#X connect 3 0 9 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 1 0;
+#X connect 8 0 21 1;
+#X connect 10 0 20 1;
+#X connect 11 0 17 0;
+#X connect 12 0 17 0;
+#X connect 13 0 17 0;
+#X connect 14 0 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 6 0;
+#X connect 16 1 11 0;
+#X connect 16 2 12 0;
+#X connect 16 3 13 0;
+#X connect 16 4 14 0;
+#X connect 17 0 4 0;
+#X connect 18 0 1 0;
+#X connect 19 0 18 0;
+#X connect 20 0 3 0;
+#X connect 21 0 20 0;
+#X coords 0 -1 1 1 90 80 1 100 100;

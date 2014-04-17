@@ -1,0 +1,27 @@
+#N canvas 446 252 451 391 10;
+#X msg 147 90 open keyboard \, 1;
+#X obj 147 169 route key;
+#X obj 147 194 route key_227 key_22;
+#X obj 148 245 spigot;
+#X obj 148 270 sel 1;
+#X obj 147 67 loadbang;
+#X obj 148 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 148 338 outlet;
+#X obj 180 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 148 316 del 200;
+#X obj 277 149 PRINT;
+#X obj 147 116 hid;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 1 0 10 0;
+#X connect 2 0 8 0;
+#X connect 2 1 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 0 0;
+#X connect 6 0 9 0;
+#X connect 8 0 3 1;
+#X connect 9 0 7 0;
+#X connect 11 0 1 0;

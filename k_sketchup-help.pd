@@ -1,0 +1,9 @@
+#N canvas 573 265 536 301 10;
+#X obj 68 65 k_camera;
+#X obj 68 187 gemwin;
+#X msg 91 153 color 0.5 0 \, create \, 1;
+#X msg 29 141 destroy;
+#X obj 150 69 k_sketchup;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;

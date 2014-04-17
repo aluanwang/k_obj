@@ -1,0 +1,58 @@
+#N canvas 31 257 709 457 10;
+#X obj 104 116 cnv 15 100 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 106 122 v1;
+#X text 111 253 9.DeInterlace;
+#X text 106 270 10.Dilate;
+#X text 111 236 8.Colourwarp;
+#X text 111 220 7.Colourreduce;
+#X text 111 203 6.Chromium;
+#X text 111 186 5.Bloom;
+#X text 111 168 4.Burn;
+#X text 111 152 3.Backlight;
+#X text 111 136 2.Backdropkey;
+#X obj 207 116 cnv 15 100 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 310 116 cnv 15 100 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 413 116 cnv 15 100 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 516 116 cnv 15 100 180 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X text 209 122 v2;
+#X text 214 136 2.DirectionalBlur;
+#X text 214 152 3.Dodge;
+#X text 214 168 4.Exclusion;
+#X text 214 186 5.FishEye;
+#X text 214 203 6.GaussianBlur;
+#X text 214 220 7.Glow;
+#X text 214 236 8.HalfTone;
+#X text 214 253 9.Kaleidascope;
+#X text 209 270 10.Levels;
+#X text 312 122 v3;
+#X text 415 122 v4;
+#X text 518 122 v5;
+#X text 317 136 2.LionelBlur;
+#X text 317 152 3.LumaCycle;
+#X text 317 168 4.LumaKey;
+#X text 317 186 5.LumaOffset;
+#X text 317 203 6.MetaImage;
+#X text 317 220 7.Mixer;
+#X text 317 236 8.PanSpinZoom;
+#X text 317 253 9.Posterize;
+#X text 312 270 10.RadialBlur;
+#X text 420 136 2.RectDistort;
+#X text 420 152 3.Refraction;
+#X text 420 168 4.Slide;
+#X text 420 186 5.Smear;
+#X text 420 203 6.Solarize;
+#X text 420 220 7.SpiralBlur;
+#X text 420 236 8.Squash;
+#X text 420 253 9.Static;
+#X text 415 270 10.Stretch;
+#X text 523 136 2.Tile;
+#X text 523 152 3.TimeBlur;
+#X text 523 168 4.TVPixel;
+#X text 523 186 5.Vectorize;
+#X text 523 203 6.Wave;
+#X coords 0 -1 1 1 520 200 1 100 100;

@@ -1,0 +1,30 @@
+#N canvas 215 257 450 435 10;
+#X obj 104 162 openpanel;
+#X obj 104 126 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 104 188 open \$1;
+#X obj 105 384 outlet~;
+#X obj 156 382 outlet~;
+#X obj 105 274 t b a;
+#X msg 105 299 start;
+#X obj 141 126 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 199 211 spigot;
+#X obj 105 332 readsf~ 2;
+#X msg 129 245 open /Users/aluan_mac/Desktop/Plastic Star.wav;
+#X msg 129 223 set open \$1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 11 0;
+#X connect 2 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 1;
+#X connect 8 0 10 0;
+#X connect 9 0 3 0;
+#X connect 9 1 4 0;
+#X connect 9 2 8 0;
+#X connect 10 0 5 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
