@@ -1,0 +1,14 @@
+#N canvas 328 296 341 200 10;
+#X obj 59 -358 k_meter;
+#X obj 58 -466 adc~;
+#X obj 133 -440 loadbang;
+#X obj 56 -434 unsig~ 100;
+#X msg 133 -408 \; pd dsp 1;
+#X floatatom 56 -410 5 0 0 0 - - -;
+#X obj 60 -386 abs;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X coords 0 200 1 199 200 40 0;

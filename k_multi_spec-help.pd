@@ -1,0 +1,23 @@
+#N canvas 370 214 540 371 10;
+#X obj 106 106 k_multi_spec;
+#X obj 129 48 adc~;
+#X obj 218 19 loadbang;
+#X msg 220 44 \; pd dsp 1;
+#X obj 185 293 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 217 293 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 250 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 282 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 313 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 1 4 0;
+#X connect 0 2 5 0;
+#X connect 0 3 6 0;
+#X connect 0 4 7 0;
+#X connect 0 5 8 0;
+#X connect 1 0 0 0;
+#X connect 1 1 0 0;
+#X connect 2 0 3 0;

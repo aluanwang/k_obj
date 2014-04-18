@@ -1,0 +1,3 @@
+#N canvas 746 131 1022 611 10;
+#X obj 95 139 k_c-mouse;
+#X coords 0 611 1 610 70 40 0;

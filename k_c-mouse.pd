@@ -34,7 +34,7 @@
 #X connect 7 0 9 0;
 #X connect 9 0 4 0;
 #X connect 10 0 5 0;
-#X restore 216 59 pd capture motion;
+#X restore 361 152 pd capture motion;
 #X obj 175 -17 trigger float bang;
 #X msg 280 4 1;
 #X obj 220 -94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1

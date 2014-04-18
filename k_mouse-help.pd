@@ -1,0 +1,14 @@
+#N canvas 645 339 647 390 10;
+#X obj 233 135 k_mouse;
+#X obj 107 157 gemwin;
+#X msg 228 65 destroy \, reset \, dimen 600 400 \, create \, 1;
+#X obj 165 237 gemhead;
+#X obj 161 309 text2d;
+#X obj 284 221 print;
+#X msg 234 253 text posX_\$2 posY_\$3;
+#X connect 0 0 6 0;
+#X connect 0 0 5 0;
+#X connect 2 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 6 0 4 0;
