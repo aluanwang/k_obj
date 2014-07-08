@@ -1,4 +1,4 @@
-#N canvas 654 172 408 284 10;
+#N canvas 303 335 310 363 10;
 #X obj 22 118 gemframebuffer;
 #X obj 38 71 loadbang;
 #X obj 22 141 translateXYZ 0 0 -4;
@@ -6,11 +6,11 @@
 #X obj 103 185 outlet;
 #X obj 164 147 loadbang;
 #X msg 164 173 color 0 0 0 1;
-#X obj 22 38 gemhead -1000;
 #X msg 38 91 dimen 500 500;
+#X obj 22 38 gemhead -1;
 #X connect 0 0 2 0;
 #X connect 0 1 4 0;
-#X connect 1 0 8 0;
+#X connect 1 0 7 0;
 #X connect 2 0 3 0;
 #X connect 5 0 6 0;
 #X connect 6 0 0 0;

@@ -1,8 +1,8 @@
 #N canvas 412 180 459 452 10;
-#X obj 106 137 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 106 137 hsl 80 15 0 360 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 106 154 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3600 1;
+#X obj 106 154 hsl 80 15 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X obj 41 278 t b f;
 #X floatatom 14 305 5 0 0 0 - - -;
 #X obj 13 355 outlet;
@@ -17,8 +17,8 @@
 #X obj 162 73 expr if($f1==0 \, 1 \, $f1);
 #X obj 15 -31 inlet;
 #X obj 16 1 unpack f f f;
-#X obj 106 171 hsl 80 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7900 1;
+#X obj 106 171 hsl 80 15 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
 #X obj 13 331 pack f f f;
 #X obj 85 278 t b f;
 #X obj 130 -8 t b b b;

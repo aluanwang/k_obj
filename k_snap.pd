@@ -3,8 +3,8 @@
 #X obj 237 190 f 0;
 #X symbolatom 236 275 10 0 0 0 - - -;
 #X obj 192 129 t b b b;
-#X msg 130 409 save /Users/aluan/Desktop/flat_design/render/desk_59.png
-1;
+#X msg 130 409 save /Users/aluan/Desktop/render/circle_symbol.png 1
+;
 #X obj 154 127 t b b;
 #X msg 178 372 set save \$1.png 1;
 #X msg -31 335 1;
@@ -37,7 +37,7 @@
 #X obj 360 466 print;
 #X msg 359 438 snap done;
 #X floatatom 423 203 5 0 0 0 - - -;
-#X obj 323 70 route name size end;
+#X obj 323 70 route name dimen end;
 #X connect 1 0 13 0;
 #X connect 1 0 17 0;
 #X connect 2 0 15 2;
@@ -78,7 +78,7 @@
 #X connect 29 0 8 0;
 #X connect 30 0 6 0;
 #X connect 33 0 32 0;
+#X connect 34 0 18 1;
 #X connect 35 0 16 0;
 #X connect 35 1 29 2;
-#X connect 35 2 18 1;
 #X connect 35 2 34 0;

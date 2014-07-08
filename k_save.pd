@@ -13,6 +13,7 @@
 #X obj 148 316 del 200;
 #X obj 277 149 PRINT;
 #X obj 147 116 hid;
+#X obj 199 270 loadbang;
 #X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 1 0 10 0;
@@ -25,3 +26,4 @@
 #X connect 8 0 3 1;
 #X connect 9 0 7 0;
 #X connect 11 0 1 0;
+#X connect 12 0 6 0;
