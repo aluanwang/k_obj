@@ -1,12 +1,12 @@
-#N canvas 694 363 389 384 10;
+#N canvas 968 384 389 384 10;
 #X obj 101 101 cnv 15 208 258 empty empty k_effect 5 12 0 14 -191677
 -66577 0;
 #X obj 105 127 tgl 30 0 empty empty E 11 15 0 15 -258113 -1 -1 1 1
 ;
-#N canvas 788 160 450 482 smear 0;
-#X obj 103 100 hsl 80 15 0 4 0 0 empty empty Gain 5 8 0 10 -1 -258113
--262144 2173 1;
-#X obj 221 118 hsl 40 14 0 1 0 0 empty empty Alpha 5 8 0 10 -1 -258113
+#N canvas 533 282 450 482 smear 0;
+#X obj 103 100 hsl 65 15 0 4 0 0 empty empty Gain 5 8 0 10 -1 -258113
+-262144 3200 1;
+#X obj 309 107 hsl 40 14 0 1 0 0 empty empty Alpha 5 8 0 10 -1 -258113
 -262144 1950 1;
 #X obj 147 71 line;
 #X obj 147 -14 sel 0 1;
@@ -18,12 +18,20 @@
 #X msg 147 46 \$1 1000;
 #X msg 78 42 \$1 1000;
 #X obj 101 133 s \$0-egain;
-#X obj 218 142 s \$0-ealpha;
+#X obj 306 131 s \$0-ealpha;
 #X obj 147 -87 r effect-tgl;
 #X obj 147 -62 change;
 #X floatatom 147 -39 5 0 0 0 - - -;
 #X msg 78 14 1;
 #X msg 109 13 1.1;
+#X obj 170 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 183 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 182 198 sel 0 1;
+#X obj 185 147 metro 1000;
+#X msg 183 224 0.1;
+#X msg 220 225 2;
 #X connect 0 0 11 0;
 #X connect 1 0 12 0;
 #X connect 2 0 1 0;
@@ -43,6 +51,13 @@
 #X connect 15 0 3 0;
 #X connect 16 0 10 0;
 #X connect 17 0 10 0;
+#X connect 18 0 21 0;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 20 1 23 0;
+#X connect 21 0 19 0;
+#X connect 22 0 10 0;
+#X connect 23 0 10 0;
 #X coords 0 -1 1 1 85 15 2 100 100;
 #X restore 105 159 pd smear;
 #N canvas 589 340 554 364 auto 0;
@@ -112,7 +127,7 @@
 #X obj 134 27 routeOSC /gemctl/8;
 #X obj 127 273 s gemlayer;
 #X obj 0 39 t b f f f f f b;
-#X msg 126 249 99999;
+#X msg 126 249 -1;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
 #X connect 4 0 3 0;
@@ -179,7 +194,7 @@
 #X obj 168 -30 routeOSC /gemctl/10;
 #X obj 128 190 s gemlayer;
 #X obj 56 14 t b f f f f b;
-#X msg 127 166 99999;
+#X msg 127 166 -1;
 #X connect 0 0 15 0;
 #X connect 0 0 6 0;
 #X connect 0 1 14 0;
@@ -242,7 +257,7 @@
 #X obj 106 -45 routeOSC /gemctl/6;
 #X obj 225 47 s gemlayer;
 #X obj 71 7 t b f f f f b;
-#X msg 224 23 99999;
+#X msg 224 23 -1;
 #X connect 1 0 0 0;
 #X connect 2 0 9 0;
 #X connect 2 1 5 0;
@@ -308,7 +323,7 @@
 1;
 #X obj 216 -12 routeOSC /gemctl/4;
 #X obj 120 233 s gemlayer;
-#X msg 119 209 99999;
+#X msg 119 209 -1;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
 #X connect 2 1 10 0;
@@ -344,7 +359,7 @@
 #X restore 205 260 graph;
 #N canvas 614 312 489 503 (subpatch) 0;
 #X obj 0 114 sel 1;
-#X obj 0 0 tgl 30 0 empty empty 6 10 15 0 15 -1 -260097 -262144 0 1
+#X obj 0 0 tgl 30 0 empty empty 6 10 15 0 15 -1 -260097 -262144 1 1
 ;
 #X msg 3 209 1 0.8;
 #X obj -52 73 s bomb-effect;
@@ -372,7 +387,7 @@
 #X obj 163 -86 routeOSC /gemctl/12;
 #X obj 142 176 s gemlayer;
 #X obj 56 14 t b f f f f f b;
-#X msg 141 152 99999;
+#X msg 141 152 -1;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
 #X connect 0 1 14 0;
@@ -406,7 +421,7 @@
 #X restore 238 293 graph;
 #N canvas 171 304 489 503 (subpatch) 0;
 #X obj 0 114 sel 1;
-#X obj 0 0 tgl 30 0 empty empty 7 10 15 0 15 -1 -260097 -262144 1 1
+#X obj 0 0 tgl 30 0 empty empty 7 10 15 0 15 -1 -260097 -262144 0 1
 ;
 #X obj 0 -26 sel 1;
 #X obj -100 252 s effect-tgl;
@@ -490,7 +505,7 @@
 #X obj 151 -64 routeOSC /gemctl/16;
 #X obj 151 223 s gemlayer;
 #X obj 56 14 t b f f f f f b;
-#X msg 150 199 99999;
+#X msg 150 199 -1;
 #X connect 0 0 10 0;
 #X connect 0 0 4 0;
 #X connect 0 1 11 0;
@@ -548,7 +563,7 @@
 #X obj 158 -53 routeOSC /gemctl/18;
 #X obj 175 36 s gemlayer;
 #X obj 56 14 t b f f f f b;
-#X msg 174 12 99999;
+#X msg 174 12 -1;
 #X connect 0 0 11 0;
 #X connect 0 0 4 0;
 #X connect 0 1 12 0;
@@ -606,7 +621,7 @@
 #X obj 166 -54 routeOSC /gemctl/20;
 #X obj 128 179 s gemlayer;
 #X obj 56 14 t b f f f f b;
-#X msg 127 155 99999;
+#X msg 127 155 -1;
 #X connect 0 0 11 0;
 #X connect 0 0 4 0;
 #X connect 0 1 12 0;
@@ -1028,9 +1043,8 @@
 #N canvas 760 149 843 622 4-bloom 0;
 #X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 102 72 inlet;
 #X obj 122 117 hsl 70 15 0 1 0 0 empty empty bloom 5 8 0 10 -1 -258113
--262144 0 1;
+-262144 1804 1;
 #X obj 69 174 spigot;
 #X obj 69 354 s outeffect;
 #X obj 177 50 r effect-bloom;
@@ -1118,54 +1132,53 @@
 #X msg 225 361 bloom;
 #X obj 169 409 makesymbol %s/_glsl/%s.frag;
 #X obj 331 321 makesymbol %s/_glsl/%s.vert;
-#X connect 0 0 3 1;
-#X connect 0 0 7 1;
+#X connect 0 0 2 1;
+#X connect 0 0 6 1;
+#X connect 0 0 11 0;
 #X connect 0 0 12 0;
-#X connect 0 0 13 0;
-#X connect 1 0 0 0;
-#X connect 2 0 10 0;
-#X connect 2 0 38 0;
-#X connect 3 0 15 0;
-#X connect 5 0 6 0;
-#X connect 6 0 0 0;
-#X connect 6 1 33 0;
-#X connect 7 0 30 0;
-#X connect 8 0 2 0;
-#X connect 9 0 11 0;
-#X connect 10 0 7 0;
-#X connect 11 0 33 0;
-#X connect 13 0 31 0;
-#X connect 14 0 24 0;
-#X connect 15 0 4 0;
-#X connect 16 0 15 1;
-#X connect 17 0 15 2;
-#X connect 18 0 19 0;
-#X connect 19 0 41 0;
-#X connect 20 0 19 1;
-#X connect 21 0 20 0;
-#X connect 22 0 15 3;
-#X connect 23 0 18 0;
-#X connect 23 1 21 0;
-#X connect 24 0 29 0;
-#X connect 24 1 23 0;
-#X connect 25 0 26 0;
-#X connect 26 0 40 0;
-#X connect 27 0 26 1;
-#X connect 28 0 15 4;
-#X connect 29 0 25 0;
-#X connect 29 1 39 0;
+#X connect 1 0 9 0;
+#X connect 1 0 37 0;
+#X connect 2 0 14 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 1 32 0;
+#X connect 6 0 29 0;
+#X connect 7 0 1 0;
+#X connect 8 0 10 0;
+#X connect 9 0 6 0;
+#X connect 10 0 32 0;
+#X connect 12 0 30 0;
+#X connect 13 0 23 0;
+#X connect 14 0 3 0;
+#X connect 15 0 14 1;
+#X connect 16 0 14 2;
+#X connect 17 0 18 0;
+#X connect 18 0 40 0;
+#X connect 19 0 18 1;
+#X connect 20 0 19 0;
+#X connect 21 0 14 3;
+#X connect 22 0 17 0;
+#X connect 22 1 20 0;
+#X connect 23 0 28 0;
+#X connect 23 1 22 0;
+#X connect 24 0 25 0;
+#X connect 25 0 39 0;
+#X connect 26 0 25 1;
+#X connect 27 0 14 4;
+#X connect 28 0 24 0;
+#X connect 28 1 38 0;
+#X connect 29 0 15 0;
 #X connect 30 0 16 0;
-#X connect 31 0 17 0;
-#X connect 31 1 14 0;
-#X connect 32 0 3 0;
-#X connect 33 0 8 0;
-#X connect 35 0 34 0;
-#X connect 36 0 37 0;
-#X connect 37 0 2 0;
-#X connect 38 0 35 0;
+#X connect 30 1 13 0;
+#X connect 31 0 2 0;
+#X connect 32 0 7 0;
+#X connect 34 0 33 0;
+#X connect 35 0 36 0;
+#X connect 36 0 1 0;
+#X connect 37 0 34 0;
+#X connect 38 0 26 0;
 #X connect 39 0 27 0;
-#X connect 40 0 28 0;
-#X connect 41 0 22 0;
+#X connect 40 0 21 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 105 250 pd 4-bloom;
 #N canvas 635 75 711 596 3-half 0;
@@ -1309,17 +1322,17 @@
 #X connect 40 0 41 0;
 #X connect 41 0 1 0;
 #X connect 42 0 39 0;
+#X connect 43 0 0 0;
 #X connect 45 0 22 0;
 #X connect 46 0 16 0;
 #X connect 47 0 48 0;
-#X connect 48 0 0 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 105 213 pd 3-half;
 #N canvas 684 107 699 659 6-starB 0;
-#X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 122 117 hsl 70 15 0 1 0 0 empty empty Alpha 5 8 0 10 -1 -258113
--262144 0 1;
+-262144 5520 1;
 #X obj 69 174 spigot;
 #X obj 149 78 unpack f f;
 #X obj 348 145 line;
@@ -1398,8 +1411,6 @@
 #X msg 8 406 send /win/13 \$1;
 #X obj 189 429 makesymbol %s/_glsl/%s.frag;
 #X obj 355 353 makesymbol %s/_glsl/%s.vert;
-#X obj 265 199 > 0;
-#X obj 264 221 change;
 #X connect 0 0 2 1;
 #X connect 0 0 8 0;
 #X connect 0 0 23 0;
@@ -1407,7 +1418,7 @@
 #X connect 1 0 41 0;
 #X connect 2 0 25 0;
 #X connect 3 0 5 0;
-#X connect 4 0 44 0;
+#X connect 3 1 0 0;
 #X connect 4 0 1 0;
 #X connect 5 0 7 0;
 #X connect 5 1 32 0;
@@ -1451,8 +1462,6 @@
 #X connect 41 0 38 0;
 #X connect 42 0 21 0;
 #X connect 43 0 15 0;
-#X connect 44 0 45 0;
-#X connect 45 0 0 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 105 324 pd 6-starB;
 #N canvas 779 201 581 619 2-boken 0;
@@ -1548,6 +1557,7 @@
 #X connect 6 0 7 0;
 #X connect 7 0 13 0;
 #X connect 8 0 9 0;
+#X connect 9 0 0 0;
 #X connect 9 1 32 0;
 #X connect 9 2 31 0;
 #X connect 10 0 6 0;
@@ -1578,7 +1588,6 @@
 #X connect 33 0 23 0;
 #X connect 34 0 17 0;
 #X connect 36 0 37 0;
-#X connect 37 0 0 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 105 176 pd 2-boken;
 #N canvas 0 22 450 300 pix-color 0;
@@ -1632,56 +1641,67 @@
 #X connect 19 0 13 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore -47 329 pd pix-color;
-#N canvas 665 106 1335 764 show-buffer 0;
-#X obj -34 171 pix_texture;
-#X obj -34 97 pix_gain 1;
-#X msg 67 174 quality \$1;
-#X obj 67 155 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
-;
-#X obj 67 131 loadbang;
-#X obj -16 121 loadbang;
-#X msg -16 143 rectangle 0;
-#X obj -6 72 r \$0-egain;
-#X obj -38 -244 inlet;
-#X obj 86 214 r buffer-xy;
-#X floatatom 86 270 5 0 0 0 - - -;
-#X obj -34 235 translateXYZ;
-#X obj 467 -295 r viewcin;
-#X obj 473 -178 k_angle;
-#X msg 486 -237 \$1 \$2 \$3;
-#X msg 511 -209 \$4 \$5 \$6;
-#X floatatom 473 -74 5 0 0 0 - - -;
-#X floatatom 512 -94 5 0 0 0 - - -;
-#X obj 473 -43 expr 90-$f1;
-#X obj 378 -87 r v-distance;
-#X floatatom 378 -17 5 0 0 0 - - -;
-#X msg 337 59 \$4 \$5 \$6;
-#X floatatom 378 30 5 0 0 0 - - -;
-#X obj 317 96 k_apos =======;
-#X obj 467 -266 t a a a;
-#X obj 298 21 t b a;
-#X obj 405 137 PRINT;
-#X obj -11 203 unpack f f f;
-#X obj -34 271 facing;
-#X obj 378 6 - 2;
-#X obj 86 243 expr ($f1/$f2)*2;
-#X obj -34 301 rectangle 2 2;
-#X obj -34 -12 r outeffect;
-#X obj -34 26 alpha;
-#X obj 38 26 r \$0-eblend;
-#X obj 38 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
-;
-#X obj 112 -75 s \$0-effect2;
-#X obj 85 -52 s \$0-effect3;
-#X obj 73 -161 s \$0-effect4;
-#X obj 58 -137 s \$0-effect5;
-#X obj 43 -112 s \$0-effect6;
-#X obj 28 -89 s \$0-effect7;
-#X obj 13 -66 s \$0-effect8;
-#X obj -38 -219 t a a a a a a a a a a a a;
-#X obj -56 -175 s \$0-effect9;
-#X obj -71 -152 s \$0-effect10;
-#X connect 0 0 11 0;
+#N canvas 485 38 1036 736 show-buffer 0;
+#X obj -357 186 pix_texture;
+#X obj -357 112 pix_gain 1;
+#X msg -185 230 quality \$1;
+#X obj -185 211 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X obj -185 187 loadbang;
+#X obj -339 136 loadbang;
+#X msg -339 158 rectangle 0;
+#X obj -329 87 r \$0-egain;
+#X obj -361 -229 inlet;
+#X obj -166 270 r buffer-xy;
+#X floatatom -166 326 5 0 0 0 - - -;
+#X obj -286 291 translateXYZ;
+#X obj 144 -280 r viewcin;
+#X obj 150 -163 k_angle;
+#X msg 163 -222 \$1 \$2 \$3;
+#X msg 188 -194 \$4 \$5 \$6;
+#X floatatom 150 -59 5 0 0 0 - - -;
+#X floatatom 189 -79 5 0 0 0 - - -;
+#X obj 150 -28 expr 90-$f1;
+#X obj 55 -72 r v-distance;
+#X floatatom 55 -2 5 0 0 0 - - -;
+#X msg 14 74 \$4 \$5 \$6;
+#X floatatom 55 45 5 0 0 0 - - -;
+#X obj -6 111 k_apos =======;
+#X obj 144 -251 t a a a;
+#X obj -25 36 t b a;
+#X obj 82 152 PRINT;
+#X obj -263 259 unpack f f f;
+#X obj -286 327 facing;
+#X obj 55 21 - 2;
+#X obj -166 299 expr ($f1/$f2)*2;
+#X obj -286 357 rectangle 2 2;
+#X obj -357 3 r outeffect;
+#X obj -357 41 alpha;
+#X obj -285 41 r \$0-eblend;
+#X obj -285 64 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj -211 -60 s \$0-effect2;
+#X obj -238 -37 s \$0-effect3;
+#X obj -250 -146 s \$0-effect4;
+#X obj -265 -122 s \$0-effect5;
+#X obj -280 -97 s \$0-effect6;
+#X obj -295 -74 s \$0-effect7;
+#X obj -310 -51 s \$0-effect8;
+#X obj -361 -204 t a a a a a a a a a a a a;
+#X obj -379 -160 s \$0-effect9;
+#X obj -394 -137 s \$0-effect10;
+#X obj -407 286 r buffer-xy;
+#X floatatom -407 342 5 0 0 0 - - -;
+#X obj -407 315 expr ($f1/$f2)*2;
+#X obj -527 373 rectangle 2 2;
+#X obj -527 260 translateXYZ 0 0 3;
+#X obj -397 219 gate 2;
+#X obj -477 59 r gemlayer;
+#X msg -483 128 1;
+#X msg -442 129 2;
+#X obj -480 103 sel -1 99997;
+#X obj -527 343 scale 0.5;
+#X connect 0 0 51 1;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
@@ -1731,6 +1751,18 @@
 #X connect 43 9 38 0;
 #X connect 43 10 37 0;
 #X connect 43 11 36 0;
+#X connect 46 0 48 0;
+#X connect 47 0 49 1;
+#X connect 48 0 47 0;
+#X connect 50 0 56 0;
+#X connect 51 0 50 0;
+#X connect 51 1 11 0;
+#X connect 52 0 55 0;
+#X connect 53 0 51 0;
+#X connect 54 0 51 0;
+#X connect 55 0 53 0;
+#X connect 55 1 54 0;
+#X connect 56 0 49 0;
 #X restore -46 310 pd show-buffer;
 #X obj -46 265 pix_buffer_read \$0-temp;
 #X msg -19 238 0;
@@ -1940,8 +1972,6 @@
 #X msg 100 309 iGlobalTime \$1;
 #X obj 179 419 makesymbol %s/_glsl/%s.frag;
 #X obj 404 317 makesymbol %s/_glsl/%s.vert;
-#X obj 299 194 > 0;
-#X obj 285 232 change;
 #X connect 0 0 2 1;
 #X connect 0 0 23 0;
 #X connect 0 0 30 0;
@@ -1951,7 +1981,7 @@
 #X connect 3 0 9 0;
 #X connect 3 0 33 0;
 #X connect 4 0 6 0;
-#X connect 5 0 46 0;
+#X connect 4 1 0 0;
 #X connect 5 0 1 0;
 #X connect 6 0 8 0;
 #X connect 6 1 31 0;
@@ -1995,11 +2025,9 @@
 #X connect 43 0 26 1;
 #X connect 44 0 21 0;
 #X connect 45 0 15 0;
-#X connect 46 0 47 0;
-#X connect 47 0 0 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 105 287 pd 5-edge-glow;
-#N canvas 354 205 676 580 7-feedback 1;
+#N canvas 354 205 676 580 7-feedback 0;
 #X obj 102 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 122 118 hsl 70 15 0.6 0.88 0 0 empty empty Alpha 5 8 0 10 -1
@@ -2144,10 +2172,10 @@
 #X connect 48 0 46 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 205 105 pd 7-feedback;
-#X obj -46 150 gemhead 99997;
-#X msg 171 14 set \$1;
-#X obj 171 -10 r gemlayer;
-#X msg 207 49 99997;
+#X msg 23 148 set \$1;
+#X obj 23 124 r gemlayer;
+#X msg 23 181 -1;
+#X obj -46 150 gemhead -1;
 #X connect 1 0 29 0;
 #X connect 23 0 22 0;
 #X connect 24 0 23 1;
@@ -2158,8 +2186,8 @@
 #X connect 30 0 23 0;
 #X connect 30 1 24 0;
 #X connect 31 0 28 0;
-#X connect 35 0 27 0;
+#X connect 35 0 37 0;
+#X connect 35 0 38 0;
 #X connect 36 0 35 0;
-#X connect 36 0 38 0;
-#X connect 37 0 36 0;
+#X connect 38 0 27 0;
 #X coords 0 -1 1 1 210 260 1 100 100;
