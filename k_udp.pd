@@ -1,8 +1,8 @@
-#N canvas 628 95 1349 716 10;
+#N canvas -97 154 1280 716 10;
 #X declare -lib mrpeach;
 #X obj 103 117 cnv 15 74 40 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 109 124 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+#X obj 109 124 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 1
 1;
 #X obj 149 46 loadbang;
 #X msg 149 78 0;
@@ -12,7 +12,7 @@
 #X obj -30 234 s chudp;
 #X obj -34 84 import mrpeach;
 #X obj 158 446 udpsend;
-#X obj 158 470 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 158 470 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 158 260 disconnect;
 #X obj 109 165 sel 1 0;
@@ -165,14 +165,14 @@
 #X obj -123 390 unpackOSC;
 #X obj -90 462 s touchosc;
 #X obj 38 527 udpsend;
-#X obj 38 551 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 38 551 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 5 445 spigot;
 #X obj 5 421 r totouch;
 #X obj 677 -129 r touchosc;
 #X obj 677 -106 routeOSC /eq;
 #X obj 677 -81 route /1 /2 /3 /4 /5 /15;
-#N canvas 320 119 748 612 toeq=========== 0;
+#N canvas 452 84 748 612 toeq=========== 1;
 #X obj 69 23 inlet;
 #X obj 114 26 inlet;
 #X obj 169 27 inlet;
@@ -215,11 +215,21 @@
 #X msg 166 94 \$1 2000;
 #X msg 113 93 \$1 2000;
 #X msg 70 84 \$1 2000;
+#X msg 308 492 send /midi /23 \$1;
+#X msg 421 491 send /midi /24 \$1;
+#X obj 381 392 r touchosc;
+#X obj 381 415 routeOSC /eq;
+#X obj 386 441 route /23 /24;
 #X connect 0 0 41 0;
+#X connect 0 0 31 0;
 #X connect 1 0 40 0;
+#X connect 1 0 32 0;
 #X connect 2 0 39 0;
+#X connect 2 0 35 0;
 #X connect 3 0 38 0;
+#X connect 3 0 33 0;
 #X connect 4 0 37 0;
+#X connect 4 0 34 0;
 #X connect 5 0 6 0;
 #X connect 6 0 17 0;
 #X connect 7 0 12 0;
@@ -228,15 +238,10 @@
 #X connect 10 0 15 0;
 #X connect 11 0 16 0;
 #X connect 12 0 24 0;
-#X connect 12 0 31 0;
 #X connect 13 0 25 0;
-#X connect 13 0 32 0;
 #X connect 14 0 26 0;
-#X connect 14 0 35 0;
 #X connect 15 0 27 0;
-#X connect 15 0 33 0;
 #X connect 16 0 28 0;
-#X connect 16 0 34 0;
 #X connect 17 0 36 0;
 #X connect 17 1 20 0;
 #X connect 17 2 18 0;
@@ -274,6 +279,12 @@
 #X connect 39 0 9 0;
 #X connect 40 0 8 0;
 #X connect 41 0 7 0;
+#X connect 42 0 30 0;
+#X connect 43 0 30 0;
+#X connect 44 0 45 0;
+#X connect 45 0 46 0;
+#X connect 46 0 42 0;
+#X connect 46 1 43 0;
 #X restore 522 -6 pd toeq===========;
 #X obj 600 501 r toclicksound;
 #X obj 600 522 sel 1 0;
@@ -290,7 +301,7 @@
 #X obj -122 415 spigot;
 #X obj -175 457 s displayipad;
 #X obj -123 361 udpreceive 9876;
-#X msg 104 494 connect 192.168.0.110 6789;
+#X msg 104 494 connect 192.168.0.102 6789;
 #X connect 1 0 4 0;
 #X connect 1 0 12 0;
 #X connect 1 0 170 0;
