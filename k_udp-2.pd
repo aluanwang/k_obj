@@ -56,10 +56,12 @@
 #X msg 39 347 connect localhost 10001;
 #X msg 79 369 connect 192.168.0.99 10001;
 #X obj 158 501 netsend~ 2;
+#X obj 228 175 s eq;
 #X connect 1 0 6 0;
 #X connect 1 0 19 1;
 #X connect 1 0 20 1;
 #X connect 1 0 27 0;
+#X connect 1 0 50 0;
 #X connect 2 0 3 0;
 #X connect 3 0 8 0;
 #X connect 3 0 1 0;

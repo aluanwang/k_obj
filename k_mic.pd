@@ -1,5 +1,5 @@
-#N canvas 355 99 823 630 10;
-#X obj 103 117 cnv 15 104 130 empty empty empty 20 12 0 14 -191677
+#N canvas 355 22 823 553 10;
+#X obj 103 114 cnv 15 104 104 empty empty empty 20 12 0 14 -191677
 -66577 0;
 #X obj 100 264 adc~;
 #X floatatom 100 417 5 0 0 0 - - -;
@@ -14,8 +14,8 @@
 #X obj 174 480 moses 100;
 #X msg 225 471 100;
 #X obj 174 453 moses 10;
-#X obj 109 201 hsl 60 15 0 50 0 0 empty empty threshold -2 -8 0 10
--262144 -1 -1 0 1;
+#X obj 109 184 hsl 60 15 0 50 0 0 empty empty threshold -2 8 0 10 -262144
+-1 -1 0 1;
 #X obj 322 519 expr ($f1/100);
 #X obj 38 75 loadbang;
 #X obj 283 404 - 0;
@@ -25,7 +25,7 @@
 1;
 #X floatatom 107 125 5 0 0 1 pitch-1 - -;
 #X floatatom 107 146 5 0 0 1 pitch-2 - -;
-#X floatatom 107 166 5 0 0 1 vol - -;
+#X floatatom 107 165 5 0 0 1 vol - -;
 #X obj 106 84 v pitch-1;
 #X obj 254 84 v pitch-2;
 #X obj 190 85 v vol;
@@ -42,10 +42,10 @@
 #X obj 350 371 expr 1-($f1/50);
 #X obj 190 44 metro 10;
 #X obj 106 44 metro 50;
-#X obj 175 216 tgl 30 0 empty empty mic 8 15 0 10 -258113 -1 -1 0 1
+#X obj 175 187 tgl 30 0 empty empty net 8 15 0 10 -258113 -1 -1 0 1
 ;
-#X obj 109 230 hsl 60 15 1 4 0 0 empty empty gain -2 -8 0 10 -262144
--1 -1 2800 1;
+#X obj 109 202 hsl 60 15 1 4 0 0 empty empty gain -2 8 0 10 -262144
+-1 -1 0 1;
 #X obj 322 541 *;
 #X obj -40 380 *~ 1;
 #X obj -115 377 *~ 1;
@@ -171,4 +171,4 @@
 #X connect 74 1 76 0;
 #X connect 75 0 40 0;
 #X connect 76 0 40 0;
-#X coords 0 -1 1 1 110 150 1 100 100;
+#X coords 0 -1 1 1 110 120 1 100 100;

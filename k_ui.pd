@@ -1,4 +1,4 @@
-#N canvas 445 195 746 738 10;
+#N canvas 563 22 746 738 10;
 #X obj 101 101 cnv 15 108 68 empty empty k_ui 5 12 0 14 -195837 -66577
 0;
 #X obj 376 409 pix_texture;
@@ -13,7 +13,7 @@
 #X obj 82 269 s \$0-u4;
 #X obj 385 83 ui_1;
 #X obj 364 225 ui_2;
-#X obj 159 148 tgl 15 0 empty empty 5 5 7 0 10 -262144 -1 -1 1 1;
+#X obj 159 148 tgl 15 0 empty empty 5 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 82 289 s \$0-u5;
 #X obj 376 463 rectangle 4 3.1;
 #X obj -58 -169 r hid;
@@ -25,7 +25,7 @@
 #X obj 36 -33 sel 1;
 #X obj 84 -32 sel 1;
 #X obj 131 -32 sel 1;
-#X obj 258 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 258 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 258 143 loadbang;
 #X obj 258 222 t b b;
@@ -291,7 +291,7 @@
 #X connect 14 0 1 0;
 #X restore 325 77 pd head;
 #X obj 152 129 hsl 40 15 0.001 4 0 0 empty empty NOISE 5 8 0 10 -262144
--1 -1 1290 1;
+-1 -1 0 1;
 #X obj 364 249 k_framebuffer;
 #X obj 385 -60 gemhead -1;
 #X obj 364 113 gemhead -1;
@@ -424,7 +424,7 @@
 #X connect 30 0 15 0;
 #X restore 550 267 pd tran;
 #X obj 550 291 ui_5 0 0 0 0;
-#X obj 179 148 tgl 15 0 empty empty 6 5 7 0 10 -262144 -1 -1 0 1;
+#X obj 179 148 tgl 15 0 empty empty 6 5 7 0 10 -262144 -1 -1 1 1;
 #X obj 81 312 s \$0-u6;
 #X obj 174 -42 sel 1;
 #X obj 550 187 gemhead -1;
