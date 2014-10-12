@@ -3,7 +3,8 @@
 #X obj 237 190 f 0;
 #X symbolatom 236 275 10 0 0 0 - - -;
 #X obj 192 129 t b b b;
-#X msg 130 409 save /Users/aluan/Desktop/render/symbol_01.png 1;
+#X msg 130 409 save /Users/aluan/Desktop/遠傳修正-製作檔/pd/anim_radar/radar_90.png
+1;
 #X obj 154 127 t b b;
 #X msg 178 372 set save \$1.png 1;
 #X msg -31 335 1;
@@ -37,6 +38,7 @@
 #X floatatom 423 203 5 0 0 0 - - -;
 #X obj 323 70 route name dimen end;
 #X obj 178 349 makesymbol %s/%s_%s;
+#X obj -77 207 alpha;
 #X connect 1 0 13 0;
 #X connect 1 0 17 0;
 #X connect 2 0 15 2;
@@ -66,7 +68,7 @@
 #X connect 22 0 21 1;
 #X connect 23 0 26 0;
 #X connect 23 1 11 0;
-#X connect 24 0 9 0;
+#X connect 24 0 36 0;
 #X connect 25 0 22 0;
 #X connect 25 0 32 0;
 #X connect 25 0 30 0;
@@ -81,3 +83,4 @@
 #X connect 34 1 29 2;
 #X connect 34 2 33 0;
 #X connect 35 0 6 0;
+#X connect 36 0 9 0;

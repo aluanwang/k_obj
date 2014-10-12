@@ -1,4 +1,4 @@
-#N canvas 694 328 525 404 10;
+#N canvas 333 302 525 404 10;
 #X floatatom 212 32 5 0 0 0 theta - -;
 #X obj 212 59 / 360;
 #X floatatom 367 53 5 0 0 0 phi - -;
