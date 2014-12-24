@@ -1,4 +1,4 @@
-#N canvas 563 22 746 738 10;
+#N canvas 563 23 746 738 10;
 #X obj 101 101 cnv 15 108 68 empty empty k_ui 5 12 0 14 -195837 -66577
 0;
 #X obj 376 409 pix_texture;
@@ -953,7 +953,7 @@
 #X connect 13 0 2 0;
 #X connect 14 0 1 0;
 #X restore 511 159 pd head;
-#N canvas 386 362 450 300 head 0;
+#N canvas 386 362 450 300 head 1;
 #X obj 273 227 outlet;
 #X obj 140 235 outlet;
 #X obj 212 33 sel 0 1;

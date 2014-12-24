@@ -1,4 +1,4 @@
-#N canvas 126 22 1280 553 10;
+#N canvas 179 50 1280 553 10;
 #X declare -lib mrpeach;
 #X obj 103 117 cnv 15 74 40 empty empty empty 20 12 0 14 -1 -66577
 0;
@@ -302,10 +302,22 @@
 #X obj -123 361 udpreceive 9876;
 #X obj 541 415 r bombbomb;
 #X msg 104 494 connect 192.168.0.102 6789;
+#X obj -133 287 hid;
+#X obj -133 311 spigot;
+#X obj -99 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj -133 206 t f f;
+#X obj -133 234 sel 1;
+#X msg -90 235 close;
+#X obj -134 334 s gemkey;
+#X obj -133 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X msg -133 262 open keyboard 0 \, 1;
 #X connect 1 0 4 0;
 #X connect 1 0 12 0;
 #X connect 1 0 169 0;
 #X connect 1 0 177 1;
+#X connect 1 0 189 0;
 #X connect 2 0 3 0;
 #X connect 3 0 29 0;
 #X connect 4 0 5 0;
@@ -492,4 +504,14 @@
 #X connect 179 0 155 0;
 #X connect 180 0 60 0;
 #X connect 181 0 157 0;
+#X connect 182 0 183 0;
+#X connect 183 0 188 0;
+#X connect 184 0 183 1;
+#X connect 185 0 186 0;
+#X connect 185 1 184 0;
+#X connect 186 0 190 0;
+#X connect 186 1 187 0;
+#X connect 187 0 182 0;
+#X connect 189 0 185 0;
+#X connect 190 0 182 0;
 #X coords 0 -1 1 1 80 60 1 100 100;
