@@ -1,5 +1,5 @@
 #N canvas 97 296 809 533 10;
-#X obj 111 -45 inlet;
+#X obj 111 -60 inlet;
 #X obj 128 4 separator;
 #X msg -138 147 draw line;
 #X obj -42 97 separator;

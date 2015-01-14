@@ -21,6 +21,7 @@
 #X obj 151 52 inlet;
 #X obj 157 464 outlet;
 #X obj 161 420 pack f f f;
+#X obj 151 80 expr 1-$f1;
 #X connect 0 0 8 1;
 #X connect 0 1 9 1;
 #X connect 0 2 10 1;
@@ -51,5 +52,6 @@
 #X connect 16 0 18 1;
 #X connect 17 0 0 0;
 #X connect 18 0 1 0;
-#X connect 19 0 3 0;
+#X connect 19 0 22 0;
 #X connect 21 0 20 0;
+#X connect 22 0 3 0;
