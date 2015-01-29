@@ -1,10 +1,10 @@
 #N canvas 377 83 746 738 10;
 #X obj 101 101 cnv 15 108 68 empty empty k_ui 5 12 0 14 -195837 -66577
 0;
-#X obj 123 129 tgl 15 0 empty empty 1 5 7 0 10 -262144 -1 -1 1 1;
-#X obj 104 148 tgl 15 0 empty empty 2 5 7 0 10 -262144 -1 -1 1 1;
-#X obj 123 148 tgl 15 0 empty empty 3 5 7 0 10 -262144 -1 -1 1 1;
-#X obj 140 148 tgl 15 0 empty empty 4 5 7 0 10 -262144 -1 -1 1 1;
+#X obj 123 129 tgl 15 0 empty empty 1 5 7 0 10 -262144 -1 -1 0 1;
+#X obj 104 148 tgl 15 0 empty empty 2 5 7 0 10 -262144 -1 -1 0 1;
+#X obj 123 148 tgl 15 0 empty empty 3 5 7 0 10 -262144 -1 -1 0 1;
+#X obj 140 148 tgl 15 0 empty empty 4 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 82 205 s \$0-u1;
 #X obj 82 227 s \$0-u2;
 #X obj 82 247 s \$0-u3;
@@ -390,7 +390,7 @@
 #X connect 30 0 15 0;
 #X restore 550 267 pd tran;
 #X obj 550 291 ui_5 0 0 0 0;
-#X obj 179 148 tgl 15 0 empty empty 6 5 7 0 10 -262144 -1 -1 1 1;
+#X obj 179 148 tgl 15 0 empty empty 6 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 81 312 s \$0-u6;
 #X obj 174 -42 sel 1;
 #X obj 406 36 r~ l1;
