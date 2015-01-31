@@ -3,9 +3,9 @@
 -66577 0;
 #X obj 105 127 tgl 30 0 empty empty E 11 15 0 15 -258113 -1 -1 1 1
 ;
-#N canvas 820 304 450 482 smear 1;
+#N canvas 820 304 450 482 smear 0;
 #X obj 103 101 hsl 30 15 0 4 0 0 empty empty Gain 5 8 0 10 -1 -258113
--262144 725 1;
+-262144 2094 1;
 #X obj 249 49 hsl 40 14 0 1 0 0 empty empty Alpha 5 8 0 10 -1 -258113
 -262144 1950 1;
 #X obj 246 26 line;
@@ -100,7 +100,6 @@
 #X connect 37 0 9 0;
 #X connect 38 0 44 0;
 #X connect 38 1 43 0;
-#X connect 39 0 0 0;
 #X connect 40 0 36 0;
 #X connect 41 0 40 1;
 #X connect 42 0 15 0;

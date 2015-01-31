@@ -6,12 +6,12 @@
 #X obj -74 385 -~;
 #X obj 8 391 +~;
 #X obj 23 336 *~;
-#X obj 115 126 hsl 80 15 0.02 0.98 0 0 empty empty WIDTH 0 8 0 10 -262144
--1 -1 3949 1;
+#X obj 106 127 hsl 150 15 0.02 0.98 0 0 empty empty WIDTH 0 8 0 10
+-262144 -1 -1 7448 1;
 #X obj 186 244 expr 1-$f1;
 #X floatatom 228 285 5 0 0 0 - - -;
 #X floatatom 186 269 5 0 0 0 - - -;
-#X obj 182 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 171 105 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj -74 342 *~;
 #X obj 230 75 loadbang;
@@ -37,13 +37,13 @@
 #X obj 290 218 k_range 0.5 1 0.9 0.85;
 #X obj -74 410 *~ 1;
 #X obj 8 415 *~ 1;
-#X msg 112 179 \$1 300;
 #X obj -67 536 outlet~;
 #X obj 96 534 outlet~;
 #X msg 127 298 \$1 50;
 #X obj 127 327 line~;
 #X msg 187 322 \$1 50;
 #X obj 187 351 line~;
+#X msg 112 179 \$1 1000;
 #X connect 0 0 2 1;
 #X connect 0 0 3 1;
 #X connect 1 0 2 0;
@@ -57,21 +57,21 @@
 #X connect 7 0 20 0;
 #X connect 8 0 10 0;
 #X connect 9 0 28 0;
-#X connect 9 0 41 0;
+#X connect 9 0 40 0;
 #X connect 10 0 29 0;
-#X connect 10 0 39 0;
+#X connect 10 0 38 0;
 #X connect 11 0 22 0;
 #X connect 12 0 4 0;
 #X connect 12 0 5 0;
 #X connect 13 0 11 0;
-#X connect 14 0 37 0;
-#X connect 14 1 38 0;
+#X connect 14 0 36 0;
+#X connect 14 1 37 0;
 #X connect 15 0 14 2;
 #X connect 16 0 14 2;
 #X connect 17 0 16 0;
 #X connect 18 0 15 0;
 #X connect 19 0 18 0;
-#X connect 20 0 36 0;
+#X connect 20 0 42 0;
 #X connect 21 0 19 0;
 #X connect 21 0 26 0;
 #X connect 21 0 30 0;
@@ -88,9 +88,9 @@
 #X connect 33 0 27 0;
 #X connect 34 0 14 0;
 #X connect 35 0 14 1;
-#X connect 36 0 21 0;
-#X connect 39 0 40 0;
-#X connect 40 0 12 1;
-#X connect 41 0 42 0;
-#X connect 42 0 6 1;
-#X coords 0 -1 1 1 100 45 1 100 100;
+#X connect 38 0 39 0;
+#X connect 39 0 12 1;
+#X connect 40 0 41 0;
+#X connect 41 0 6 1;
+#X connect 42 0 21 0;
+#X coords 0 -1 1 1 160 45 1 100 100;

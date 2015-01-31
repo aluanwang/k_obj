@@ -11,7 +11,7 @@
 #X obj 82 269 s \$0-u4;
 #X obj 385 83 ui_1;
 #X obj 364 225 ui_2;
-#X obj 159 148 tgl 15 0 empty empty 5 5 7 0 10 -262144 -1 -1 1 1;
+#X obj 159 148 tgl 15 0 empty empty 5 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 82 289 s \$0-u5;
 #X obj -58 -169 r hid;
 #X obj -25 -122 route key_225;
@@ -818,7 +818,7 @@
 #X obj 184 335 sel 1;
 #X msg 184 359 0;
 #X obj 106 -214 r touchosc;
-#X obj 57 137 tgl 15 0 empty empty 7 5 7 0 10 -262144 -1 -1 0 1;
+#X obj 103 129 tgl 15 0 empty empty 7 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 219 -33 sel 1;
 #N canvas 99 396 450 300 head 0;
 #X obj 273 227 outlet;
@@ -1173,7 +1173,6 @@
 #X connect 103 4 21 0;
 #X connect 103 5 50 0;
 #X connect 103 6 72 0;
-#X connect 104 0 71 0;
 #X connect 105 0 76 2;
 #X connect 105 0 106 0;
 #X connect 107 0 108 0;
