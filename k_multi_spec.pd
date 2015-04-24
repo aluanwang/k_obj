@@ -1,11 +1,11 @@
-#N canvas 385 39 881 656 10;
+#N canvas 365 59 1047 654 10;
 #X obj -132 224 inlet~;
 #X obj -122 276 rfft~;
 #X obj -122 309 *~;
 #X obj -91 309 *~;
 #X obj -122 339 sqrt~;
 #X obj 125 29 hsl 50 12 0.1 50 0 0 \$0a \$0b Gain -36 5 0 10 -228856
--1 -1 0 1;
+-1 -1 3500 1;
 #X obj -122 428 tabwrite~ \$0-spectrum;
 #X obj -131 449 outlet~;
 #N canvas 0 22 1035 635 (subpatch) 0;
@@ -23,14 +23,14 @@
 #X obj 17 152 hsl 251 10 0 256 0 0 empty empty start 30 6 0 8 -191407
 -1 -1 0 1;
 #X obj 17 166 hsl 251 10 0 256 0 0 empty empty end 30 6 0 8 -191407
--1 -1 0 1;
+-1 -1 4883 1;
 #X obj 14 211 int;
-#X obj 254 14 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 254 14 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 330 230 outlet;
 #X obj 274 49 vsl 10 95 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 122 -40 loadbang;
+-1 -1 9400 1;
+#X obj 125 -75 loadbang;
 #X obj -251 379 switch~ 8192;
 #X obj 303 147 t b b;
 #X obj 303 124 metro 10;
@@ -349,6 +349,14 @@
 #X msg -192 311 set 4096;
 #X msg -209 288 set 2048;
 #X msg 122 -18 0;
+#X floatatom 347 72 5 0 0 0 - - -;
+#X obj 305 -28 f \$0;
+#X msg 305 0 \; \$1-ll const 1;
+#X obj 125 -50 t b b b b;
+#X obj 422 -13 f \$0;
+#X obj 89 -64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 421 13 \; \$1-ss 0 0 50 100 200 \; \$1-ee 0 50 100 200 255;
 #X connect 0 0 7 0;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
@@ -370,8 +378,8 @@
 #X connect 17 0 54 0;
 #X connect 18 0 24 0;
 #X connect 20 0 60 0;
-#X connect 21 0 70 0;
-#X connect 21 0 32 0;
+#X connect 20 0 71 0;
+#X connect 21 0 74 0;
 #X connect 23 0 26 0;
 #X connect 23 1 63 0;
 #X connect 24 0 23 0;
@@ -421,4 +429,11 @@
 #X connect 68 0 22 0;
 #X connect 69 0 22 0;
 #X connect 70 0 12 0;
+#X connect 72 0 73 0;
+#X connect 74 0 70 0;
+#X connect 74 1 32 0;
+#X connect 74 2 72 0;
+#X connect 74 3 75 0;
+#X connect 75 0 77 0;
+#X connect 76 0 21 0;
 #X coords 0 -1 1 1 280 170 1 10 10;
