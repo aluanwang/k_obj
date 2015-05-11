@@ -1,4 +1,4 @@
-#N canvas 472 305 816 720 10;
+#N canvas 478 28 816 720 10;
 #X obj 103 114 cnv 15 104 104 empty empty empty 20 12 0 14 -191677
 -66577 0;
 #X obj 118 319 adc~;
@@ -10,7 +10,7 @@
 #X msg 243 554 100;
 #X obj 192 508 moses 10;
 #X obj 109 184 hsl 60 15 0 50 0 0 empty empty threshold -2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 2300 1;
 #X obj 340 574 expr ($f1/100);
 #X obj -38 70 loadbang;
 #X obj 301 459 - 0;
@@ -33,7 +33,7 @@
 #X obj 174 186 tgl 30 0 empty empty mic 8 15 0 10 -258113 -258113 -1
 1 1;
 #X obj 109 202 hsl 60 15 1 4 0 0 empty empty gain -2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 2800 1;
 #X obj 340 596 *;
 #X obj -40 380 *~ 1;
 #X obj -115 377 *~ 1;
