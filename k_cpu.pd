@@ -1,12 +1,10 @@
 #N canvas 608 332 522 440 10;
-#X obj 103 118 cnv 15 74 25 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 154 44 cputime;
-#X obj 154 88 * 0.1;
-#X obj 154 63 int;
-#X obj 154 -38 loadbang;
-#X obj 106 120 nbx 3 20 0 500 0 0 empty empty empty -30 10 0 15 -260818
--1 -262144 64 256;
+#X obj 154 6 cputime;
+#X obj 154 50 * 0.1;
+#X obj 154 25 int;
+#X obj 154 -76 loadbang;
+#X obj 126 114 nbx 3 18 0 500 0 0 empty empty empty -30 10 0 15 -24198
+-1 -262144 17 256;
 #N canvas 864 154 451 440 size&color 0;
 #X obj 89 133 inlet;
 #X msg 84 212 0;
@@ -47,24 +45,24 @@
 #X connect 15 1 8 0;
 #X restore 195 81 pd size&color;
 #X obj 228 37 apple/cpu_temperature;
-#X obj 154 25 t b b b;
+#X obj 154 -13 t b b b;
 #X obj 236 119 nbx 2 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 154 -13 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 154 -51 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 51 213 outlet;
-#X obj 154 6 metro 1000;
-#X connect 1 0 3 0;
-#X connect 2 0 6 0;
-#X connect 2 0 5 0;
-#X connect 3 0 2 0;
+#X obj 125 144 outlet;
+#X obj 154 -32 metro 1000;
+#X connect 0 0 2 0;
+#X connect 1 0 5 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 9 0;
 #X connect 4 0 10 0;
-#X connect 5 0 11 0;
-#X connect 6 0 5 0;
-#X connect 7 0 9 0;
-#X connect 8 0 1 0;
-#X connect 8 1 1 1;
-#X connect 8 2 7 0;
-#X connect 10 0 12 0;
-#X connect 12 0 8 0;
-#X coords 0 -1 1 1 80 45 1 100 100;
+#X connect 5 0 4 0;
+#X connect 6 0 8 0;
+#X connect 7 0 0 0;
+#X connect 7 1 0 1;
+#X connect 7 2 6 0;
+#X connect 9 0 11 0;
+#X connect 11 0 7 0;
+#X coords 0 -1 1 1 80 35 1 100 100;
