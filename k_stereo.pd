@@ -6,26 +6,26 @@
 #X obj -74 385 -~;
 #X obj 8 391 +~;
 #X obj 23 336 *~;
-#X obj 106 127 hsl 150 15 0.02 0.98 0 0 empty empty WIDTH 0 8 0 10
+#X obj 138 123 hsl 118 30 0.02 0.98 0 0 empty empty WIDTH 0 8 0 10
 -262144 -1 -1 7448 1;
 #X obj 186 244 expr 1-$f1;
 #X floatatom 228 285 5 0 0 0 - - -;
 #X floatatom 186 269 5 0 0 0 - - -;
-#X obj 171 105 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
+#X obj 102 123 bng 30 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj -74 342 *~;
-#X obj 230 75 loadbang;
+#X obj 19 83 loadbang;
 #X obj -73 458 st-pureverb /key;
 #X msg 88 424 3 \$1;
 #X msg 133 427 1 0.8;
 #X obj 133 401 loadbang;
 #X floatatom 88 400 5 0 0 0 - - -;
 #X obj 88 374 expr ($f1-0.5)/0.6;
-#X floatatom 112 154 5 0 0 0 - - -;
-#X obj 112 202 line;
-#X msg 182 45 0.4999;
-#X obj 112 45 inlet;
-#X floatatom 112 68 5 0 0 0 - - -;
+#X floatatom 108 208 5 0 0 0 - - -;
+#X obj 108 256 line;
+#X msg 90 45 0.4999;
+#X obj 135 44 inlet;
+#X floatatom 135 67 5 0 0 0 - - -;
 #X obj 290 306 line~;
 #X obj 232 166 moses 0.49;
 #X msg 290 255 \$1 100;
@@ -43,7 +43,7 @@
 #X obj 127 327 line~;
 #X msg 187 322 \$1 50;
 #X obj 187 351 line~;
-#X msg 112 179 \$1 1000;
+#X msg 108 233 \$1 1000;
 #X connect 0 0 2 1;
 #X connect 0 0 3 1;
 #X connect 1 0 2 0;
@@ -93,4 +93,4 @@
 #X connect 40 0 41 0;
 #X connect 41 0 6 1;
 #X connect 42 0 21 0;
-#X coords 0 -1 1 1 160 45 1 100 100;
+#X coords 0 -1 1 1 160 55 1 100 100;

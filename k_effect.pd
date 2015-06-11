@@ -1,13 +1,13 @@
-#N canvas 149 436 389 384 10;
-#X obj 101 101 cnv 15 208 258 empty empty k_effect 5 12 0 14 -191677
+#N canvas 149 436 653 409 10;
+#X obj 101 101 cnv 15 388 158 empty empty k_effect 5 12 0 14 -191677
 -66577 0;
-#X obj 105 127 tgl 30 0 empty empty E 11 15 0 15 -258113 -1 -1 1 1
+#X obj 105 127 tgl 30 0 empty empty E 11 15 0 15 -258113 -1 -1 0 1
 ;
 #N canvas 820 304 450 482 smear 0;
 #X obj 103 101 hsl 30 15 0 4 0 0 empty empty Gain 5 8 0 10 -1 -258113
--262144 2094 1;
+-262144 0 1;
 #X obj 249 49 hsl 40 14 0 1 0 0 empty empty Alpha 5 8 0 10 -1 -258113
--262144 1950 1;
+-262144 0 1;
 #X obj 246 26 line;
 #X obj 246 -59 sel 0 1;
 #X msg 246 -32 0;
@@ -106,7 +106,7 @@
 #X connect 43 0 39 0;
 #X connect 44 0 39 0;
 #X coords 0 -1 1 1 95 17 2 100 100;
-#X restore 105 159 pd smear;
+#X restore 105 160 pd smear;
 #N canvas 496 376 554 364 auto 0;
 #X obj 100 100 tgl 30 0 empty empty AUTO 2 15 0 12 -258113 -1 -1 0
 1;
@@ -202,7 +202,7 @@
 #X connect 27 7 26 0;
 #X connect 28 0 25 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 205 326 graph;
+#X restore 409 184 graph;
 #N canvas 655 149 489 503 (subpatch) 0;
 #X obj 0 114 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 5 10 15 0 15 -1 -260097 -262144 0 1
@@ -258,10 +258,10 @@
 #X connect 22 5 23 0;
 #X connect 24 0 21 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 238 260 graph;
+#X restore 409 218 graph;
 #N canvas 639 121 558 553 (subpatch) 0;
 #X obj 0 55 sel 1;
-#X obj 0 0 tgl 30 0 empty empty 3 10 15 0 15 -1 -260097 -262144 1 1
+#X obj 0 0 tgl 30 0 empty empty 3 10 15 0 15 -1 -260097 -262144 0 1
 ;
 #X obj -160 341 s effect-time;
 #X msg -116 317 0 0;
@@ -328,7 +328,7 @@
 #X connect 30 0 31 0;
 #X connect 31 0 11 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 205 293 graph;
+#X restore 409 150 graph;
 #N canvas 756 219 425 551 (subpatch) 0;
 #X obj -63 139 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 2 10 15 0 15 -1 -260097 -262144 0 1
@@ -390,7 +390,7 @@
 #X connect 24 0 23 0;
 #X connect 27 0 25 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 205 260 graph;
+#X restore 409 116 graph;
 #N canvas 614 312 489 503 (subpatch) 0;
 #X obj 0 114 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 6 10 15 0 15 -1 -260097 -262144 0 1
@@ -448,7 +448,7 @@
 #X connect 23 6 24 0;
 #X connect 25 0 22 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 238 293 graph;
+#X restore 443 116 graph;
 #N canvas 489 266 633 493 (subpatch) 0;
 #X obj 13 105 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 7 10 15 0 15 -1 -260097 -262144 0 1
@@ -501,7 +501,7 @@
 #X connect 22 6 7 0;
 #X connect 22 7 21 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 238 326 graph;
+#X restore 443 150 graph;
 #N canvas 590 243 489 503 (subpatch) 0;
 #X obj 53 124 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 8 10 15 0 15 -1 -260097 -262144 0 1
@@ -549,7 +549,7 @@
 #X connect 19 0 17 0;
 #X connect 20 0 1 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 271 260 graph;
+#X restore 443 184 graph;
 #N canvas 187 299 489 503 (subpatch) 0;
 #X obj 0 114 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 9 10 15 0 15 -1 -260097 -262144 0 1
@@ -601,7 +601,7 @@
 #X connect 22 5 23 0;
 #X connect 23 0 21 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 271 293 graph;
+#X restore 443 218 graph;
 #N canvas 187 299 489 503 (subpatch) 0;
 #X obj 0 114 sel 1;
 #X obj 0 0 tgl 30 0 empty empty 10 5 15 0 15 -1 -260097 -262144 0 1
@@ -653,7 +653,7 @@
 #X connect 21 0 19 0;
 #X connect 22 0 2 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
-#X restore 271 326 graph;
+#X restore 439 269 graph;
 #N canvas 0 22 450 300 pix-color 0;
 #X obj 106 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1207,12 +1207,12 @@
 #X connect 38 1 37 0;
 #X connect 39 0 9 1;
 #X coords 0 -1 1 1 95 35 1 100 100;
-#X restore 105 250 pd 4-bloom;
+#X restore 304 106 pd 4-bloom;
 #N canvas 475 174 711 596 3-half 0;
-#X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 122 117 hsl 70 15 0 1 0 0 empty empty halftone 5 8 0 10 -1 -258113
--262144 6900 1;
+-262144 0 1;
 #X obj 69 174 spigot;
 #X obj 78 369 s outeffect;
 #X obj 124 187 spigot;
@@ -1364,7 +1364,7 @@
 #X connect 52 0 25 0;
 #X connect 52 0 10 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
-#X restore 105 213 pd 3-half;
+#X restore 105 219 pd 3-half;
 #N canvas 703 288 699 659 6-starB 0;
 #X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1504,7 +1504,7 @@
 #X connect 45 0 22 0;
 #X connect 45 0 44 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
-#X restore 105 324 pd 6-starB;
+#X restore 304 180 pd 6-starB;
 #N canvas 558 197 581 619 2-boken 0;
 #X obj 101 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1633,7 +1633,7 @@
 #X connect 37 0 38 0;
 #X connect 38 0 1 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
-#X restore 105 176 pd 2-boken;
+#X restore 105 181 pd 2-boken;
 #N canvas 444 148 713 730 5-edge-glow 0;
 #X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1781,7 +1781,7 @@
 #X connect 49 0 23 0;
 #X connect 49 0 30 0;
 #X coords 0 -1 1 1 95 35 1 100 100;
-#X restore 105 287 pd 5-edge-glow;
+#X restore 304 143 pd 5-edge-glow;
 #N canvas 407 249 676 580 7-feedback 0;
 #X obj 102 119 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -2313,4 +2313,4 @@
 #X connect 41 0 37 0;
 #X connect 42 0 34 0;
 #X connect 45 0 37 0;
-#X coords 0 -1 1 1 210 260 1 100 100;
+#X coords 0 -1 1 1 390 160 1 100 100;

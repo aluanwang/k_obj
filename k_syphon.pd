@@ -1,0 +1,23 @@
+#N canvas 317 149 282 250 10;
+#X obj 104 122 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X obj -4 5 loadbang;
+#X msg -4 27 0;
+#X obj 104 208 syphonserver aluan_pd;
+#X obj 104 183 gemhead 99999;
+#X msg 181 160 set \$1;
+#X obj 181 68 r gemlayer;
+#X obj 181 90 sel 0 1;
+#X msg 181 114 10000;
+#X msg 200 138 -1;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X coords 0 -1 1 1 40 55 1 100 100;

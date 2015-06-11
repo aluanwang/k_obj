@@ -1,6 +1,6 @@
-#N canvas 774 40 1440 780 10;
+#N canvas 520 92 1440 780 10;
 #X declare -lib mrpeach;
-#X obj 103 117 cnv 15 74 50 empty empty empty 20 12 0 14 -1 -66577
+#X obj 103 117 cnv 15 74 50 empty empty empty 20 12 0 14 -175035 -66577
 0;
 #X obj 109 135 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
 1;
@@ -343,7 +343,7 @@
 #X obj 214 -13 route key_144;
 #X msg 216 70 send /effect /6 \$1;
 #X obj 210 119 packOSC;
-#X obj 216 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 216 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 217 18 sel 1;
 #X connect 1 0 4 0;
