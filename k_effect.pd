@@ -1,13 +1,13 @@
 #N canvas 149 436 653 409 10;
 #X obj 101 101 cnv 15 388 158 empty empty k_effect 5 12 0 14 -191677
 -66577 0;
-#X obj 105 127 tgl 30 0 empty empty E 11 15 0 15 -258113 -1 -1 0 1
+#X obj 105 127 tgl 30 0 empty empty E 11 15 0 15 -258113 -1 -1 1 1
 ;
-#N canvas 820 304 450 482 smear 0;
+#N canvas 820 304 457 552 smear 0;
 #X obj 103 101 hsl 30 15 0 4 0 0 empty empty Gain 5 8 0 10 -1 -258113
--262144 0 1;
+-262144 2900 1;
 #X obj 249 49 hsl 40 14 0 1 0 0 empty empty Alpha 5 8 0 10 -1 -258113
--262144 0 1;
+-262144 1950 1;
 #X obj 246 26 line;
 #X obj 246 -59 sel 0 1;
 #X msg 246 -32 0;
@@ -53,6 +53,10 @@
 #X msg 185 74 0;
 #X obj -8 160 k_range 4 13 2 4;
 #X msg -28 125 1;
+#X obj 166 340 s totouch;
+#X obj 166 313 packOSC;
+#X msg 166 288 send /gemctl/46 \$1;
+#X obj 166 262 / 4;
 #X connect 0 0 37 0;
 #X connect 1 0 10 0;
 #X connect 2 0 1 0;
@@ -98,6 +102,7 @@
 #X connect 35 0 40 0;
 #X connect 36 0 38 0;
 #X connect 37 0 9 0;
+#X connect 37 0 48 0;
 #X connect 38 0 44 0;
 #X connect 38 1 43 0;
 #X connect 40 0 36 0;
@@ -105,6 +110,9 @@
 #X connect 42 0 15 0;
 #X connect 43 0 39 0;
 #X connect 44 0 39 0;
+#X connect 46 0 45 0;
+#X connect 47 0 46 0;
+#X connect 48 0 47 0;
 #X coords 0 -1 1 1 95 17 2 100 100;
 #X restore 105 160 pd smear;
 #N canvas 496 376 554 364 auto 0;
@@ -142,7 +150,7 @@
 #N canvas 331 147 414 574 (subpatch) 0;
 #X obj 28 229 s effect-bloom;
 #X obj 15 127 sel 1;
-#X obj 0 0 tgl 30 0 empty empty 4 10 15 0 15 -1 -260097 -262144 0 1
+#X obj 0 0 tgl 30 0 empty empty 4 10 15 0 15 -1 -260097 -262144 1 1
 ;
 #X obj -40 196 s gem-fog;
 #X msg -40 168 3 0.1;
@@ -164,7 +172,7 @@
 #X msg 157 -112 3000 \, 400 20000;
 #X obj 100 -180 r \$0-eauto;
 #X obj 113 -18 r touchosc;
-#X obj 113 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 113 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 113 5 routeOSC /gemctl/8;
 #X obj 84 94 s gemlayer;
@@ -360,6 +368,8 @@
 #X obj 119 232 s gemlayer;
 #X obj 137 307 s bombbomb;
 #X msg 119 209 1;
+#X obj 164 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 4 0;
 #X connect 0 1 8 0;
 #X connect 1 0 10 0;
@@ -389,6 +399,7 @@
 #X connect 23 0 1 0;
 #X connect 24 0 23 0;
 #X connect 27 0 25 0;
+#X connect 28 0 26 0;
 #X coords 0 1 100 -1 30 30 1 0 0;
 #X restore 409 116 graph;
 #N canvas 614 312 489 503 (subpatch) 0;
@@ -709,7 +720,7 @@
 #X obj -46 59 > 0;
 #X obj -46 37 r \$0-ealpha;
 #N canvas 797 176 594 577 udp 0;
-#X obj -94 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -94 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj -94 126 s toudp;
 #X obj -94 99 packOSC;
@@ -1082,10 +1093,10 @@
 #X coords 0 -1 1 1 95 35 1 100 100;
 #X restore 205 143 pd 8-distorded;
 #N canvas 494 135 591 542 4-bloom 0;
-#X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 102 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 122 117 hsl 70 15 0 1 0 0 empty empty bloom 5 8 0 10 -1 -258113
--262144 0 1;
+-262144 6900 1;
 #X obj 69 174 spigot;
 #X obj 69 354 s outeffect;
 #X obj 234 68 r effect-bloom;
