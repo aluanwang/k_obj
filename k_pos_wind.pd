@@ -1,5 +1,5 @@
 #N canvas 539 200 862 515 10;
-#N canvas 315 175 749 511 rotate-pos 1;
+#N canvas 315 175 749 511 rotate-pos 0;
 #X obj 12 121 / 100;
 #X obj 175 200 expr $f1*2*3.1415;
 #X obj 175 222 t f f;
@@ -197,15 +197,15 @@ resize \$1 \; \$2-radius resize \$1 \;;
 #X connect 32 0 28 0;
 #X restore 149 242 pd meta;
 #X obj 108 139 hsl 70 15 0 1 0 0 empty empty Radius-x 5 8 0 10 -262144
--1 -1 3443 1;
+-1 -1 690 1;
 #X obj -157 307 s \$0-ctl-radius;
 #X obj 108 176 hsl 70 15 0 1 0 0 empty empty Speed 5 8 0 10 -262144
--1 -1 3800 1;
+-1 -1 138 1;
 #X obj 19 414 line;
 #X msg 19 393 \$1 100;
 #X obj 19 438 s \$0-ctl-speed;
 #X obj 108 158 hsl 70 15 0 1 0 0 empty empty Radius-y 5 8 0 10 -262144
--1 -1 3443 1;
+-1 -1 690 1;
 #X obj -60 308 s \$0-ctl-radiusy;
 #X obj -60 280 k_spring 1;
 #X obj -157 279 k_spring 1;

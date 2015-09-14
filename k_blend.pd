@@ -1,6 +1,6 @@
 #N canvas 0 22 503 606 10;
 #X obj 105 117 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 1;
 #X obj -9 171 inlet;
 #X obj 73 512 outlet;
 #X obj 59 166 inlet;

@@ -1,4 +1,4 @@
-#N canvas 576 46 875 756 10;
+#N canvas 920 59 875 756 10;
 #X obj 103 117 cnv 15 44 30 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #N canvas 759 22 629 781 coordinates 0;
@@ -501,9 +501,11 @@
 #X obj -49 400 s fader;
 #X msg -205 430 view \$1 \$2 \$3 \$4 \$5 \$6 0 1 0;
 #X msg 194 160 perspec -1 1 -1 1 \$1 30;
+#X obj -220 486 s viewcin;
 #X connect 1 0 22 0;
 #X connect 1 0 97 0;
 #X connect 1 0 29 0;
+#X connect 1 0 99 0;
 #X connect 2 0 3 0;
 #X connect 3 0 36 0;
 #X connect 4 0 23 0;
