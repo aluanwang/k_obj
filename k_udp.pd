@@ -329,7 +329,7 @@
 #X obj 113 567 r totouch;
 #X obj 112 617 print;
 #X obj 114 596 unpackOSC;
-#X msg 46 392 connect 10.0.1.7 6789;
+#X msg 46 392 connect 192.168.43.44 6789;
 #X connect 1 0 6 0;
 #X connect 1 0 161 1;
 #X connect 1 0 166 1;

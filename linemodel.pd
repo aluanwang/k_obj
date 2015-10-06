@@ -1,4 +1,4 @@
-#N canvas 138 42 1273 737 10;
+#N canvas 667 145 1273 737 10;
 #X obj 181 -44 f;
 #X obj 175 -111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -103,7 +103,7 @@
 #X connect 40 0 41 0;
 #X connect 42 0 5 0;
 #X restore 56 -70 pd readobj;
-#N canvas 198 197 405 547 point 0;
+#N canvas 985 342 405 547 point 0;
 #X obj -49 290 gemvertexbuffer;
 #X obj -172 222 loadbang;
 #X obj -47 146 t a b;
@@ -133,7 +133,7 @@
 #X connect 12 0 5 0;
 #X connect 13 0 12 1;
 #X restore 21 62 pd point;
-#N canvas 648 168 594 398 line 0;
+#N canvas 488 359 594 398 line 0;
 #X obj 180 270 gemvertexbuffer;
 #X obj 204 220 loadbang;
 #X obj 180 120 t a b;
@@ -159,6 +159,8 @@
 #X obj 444 295 t a;
 #X msg 204 245 shape linestrip \, width 1;
 #X msg 443 340 draw linestrip;
+#X obj 12 89 r \$0-shape;
+#X msg 12 110 shape \$1;
 #X connect 1 0 23 0;
 #X connect 2 0 0 0;
 #X connect 2 1 6 0;
@@ -184,6 +186,8 @@
 #X connect 22 0 0 0;
 #X connect 23 0 0 0;
 #X connect 24 0 0 0;
+#X connect 25 0 26 0;
+#X connect 26 0 0 0;
 #X restore 37 36 pd line;
 #X obj 75 -1 s \$0-resize;
 #N canvas 186 419 450 300 head-point 0;
@@ -437,7 +441,7 @@
 #X floatatom 567 58 5 0 0 0 - - -;
 #X obj 567 80 + 1;
 #X obj 567 105 moses 20;
-#X msg 612 130 99;
+#X msg 612 130 1799;
 #X floatatom 567 127 5 0 0 0 - - -;
 #X obj 664 81 r \$0-length;
 #X obj 664 107 - 1;
@@ -471,7 +475,7 @@
 #X obj -135 -92 table \$0_x_1 10000;
 #X obj 729 218 + 0;
 #X obj 156 99 t f f;
-#X obj 239 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 239 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 156 301 + 0;
 #X obj 239 260 > 12;

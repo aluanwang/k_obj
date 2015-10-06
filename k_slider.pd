@@ -1,5 +1,5 @@
 #N canvas 7 282 451 384 10;
-#X obj 104 101 hsl 100 15 0 360 0 0 empty empty N=0 5 8 0 10 -262144
+#X obj 104 101 hsl 100 15 0 1.5 0 0 empty empty N=0 5 8 0 10 -262144
 -1 -1 0 1;
 #X floatatom 101 126 5 0 0 0 - - -;
 #X obj 101 63 inlet;
