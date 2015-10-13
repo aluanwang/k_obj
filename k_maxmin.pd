@@ -3,19 +3,19 @@
 #X floatatom -75 6 5 0 0 0 - - -;
 #X obj 69 179 expr if($f1>$f2 \, $f1 \, $f2);
 #X floatatom 69 223 5 0 0 0 - - -;
-#X floatatom 146 130 5 0 0 2 max - -;
-#X msg 306 86 0;
+#X floatatom 145 131 5 0 0 2 max - -;
+#X msg 286 158 0;
 #X floatatom -56 118 5 0 0 0 - - -;
 #X obj -56 76 expr if($f1<$f2 \, $f1 \, $f2);
 #X floatatom -56 52 5 0 0 0 - - -;
-#X floatatom 184 130 5 0 0 2 min - -;
+#X floatatom 183 131 5 0 0 2 min - -;
 #X obj 69 202 change;
 #X obj -56 97 change;
 #X obj -75 30 t f f f b;
 #X obj 152 23 + 1;
-#X floatatom 106 130 5 0 0 2 count - -;
-#X obj 253 64 sel 0;
-#X obj 253 85 t b b;
+#X floatatom 105 131 5 0 0 2 count - -;
+#X obj 233 136 sel 0;
+#X obj 233 157 t b b;
 #X msg 36 125 100;
 #X floatatom -74 201 5 0 0 0 - - -;
 #X obj 69 246 t f f;
@@ -25,6 +25,9 @@
 #X obj 210 -4 init \$1;
 #X obj -75 227 outlet;
 #X obj -75 -23 inlet;
+#X obj 202 58 inlet;
+#X obj 202 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 13 0;
 #X connect 0 0 14 0;
 #X connect 1 0 12 0;
@@ -57,4 +60,6 @@
 #X connect 22 0 0 1;
 #X connect 23 0 22 1;
 #X connect 25 0 1 0;
+#X connect 26 0 27 0;
+#X connect 27 0 16 0;
 #X coords 0 -1 1 1 120 50 1 100 100;

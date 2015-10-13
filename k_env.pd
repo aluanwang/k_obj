@@ -1,0 +1,33 @@
+#N canvas 729 134 437 367 10;
+#X obj 102 101 cnv 30 100 100 empty \$0-test-canvas empty 40 90 0 12
+-228856 -66577 0;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0_env 100 float 0;
+#X coords 0 1 99 0 100 100 2 0 0;
+#X restore 102 102 graph;
+#X obj 240 145 loadbang;
+#X floatatom 240 215 5 0 0 0 - - -;
+#X msg 240 244 xticks 0 \$1 \$1;
+#X msg 216 272 ylabel -16 0 1;
+#X obj -39 211 inlet;
+#X obj 64 212 inlet;
+#X obj 237 113 f \$0;
+#X obj 237 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 167 179 5 0 0 0 - - -;
+#X obj 216 311 s \$0_env;
+#X obj -36 294 tabwrite \$0_env;
+#X obj 237 68 loadbang;
+#X msg 240 179 10;
+#X connect 2 0 5 0;
+#X connect 2 0 14 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 11 0;
+#X connect 6 0 12 0;
+#X connect 7 0 12 1;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 13 0 9 0;
+#X connect 14 0 3 0;
+#X coords 0 -1 1 1 104 104 2 100 100;
