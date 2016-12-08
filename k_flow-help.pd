@@ -1,0 +1,15 @@
+#N canvas 162 419 450 300 12;
+#X obj 86 20 noise~;
+#X obj 86 45 env~;
+#X obj 306 78 loadbang;
+#X obj 83 104 k_flow 100;
+#X msg 306 103 \; pd dsp 1;
+#X floatatom 83 129 5 0 0 0 - - -, f 5;
+#X obj 190 107 k_speed 100;
+#X floatatom 190 132 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 6 0 7 0;

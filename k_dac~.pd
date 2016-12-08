@@ -6,14 +6,14 @@
 #X obj -58 177 dac~;
 #X obj -57 130 *~;
 #X obj 20 126 *~;
-#X obj 103 117 hsl 75 28 0 1 0 0 empty empty 1.000000 0 15 0 10 -262144
--1 -1 7400 1;
+#X obj 103 117 hsl 75 28 0 1 0 0 empty empty 0.780000 0 15 0 10 -262144
+-1 -1 5000 1;
 #X obj 100 176 line~;
 #X msg 100 154 \$1 1000;
-#X floatatom 159 184 5 0 0 0 - - -;
+#X floatatom 159 184 5 0 0 0 - - -, f 5;
 #X obj 211 158 list prepend label;
 #X obj 212 183 route list;
-#X obj 211 134 makefilename %f;
+#X obj 208 103 makefilename %f;
 #X obj 100 41 loadbang;
 #X msg 100 65 1;
 #X connect 0 0 5 0;

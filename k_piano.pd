@@ -1,4 +1,4 @@
-#N canvas 433 119 762 681 10;
+#N canvas 602 43 762 681 10;
 #X obj 22 28 cnv 12 5 5 empty \$0-low.label.r 60 0 7 0 9 -262144 -1
 0;
 #X obj 143 30 cnv 12 5 5 empty \$0-high.label.r 72 2 7 0 9 -262144
@@ -7,7 +7,7 @@
 #X msg 557 215 5;
 #X obj 557 240 s \$0-octave.slider.r;
 #X obj 287 102 r \$0-octave.slider;
-#X msg 101 361 70 127;
+#X msg 101 361 72 127;
 #X obj 101 338 prepend set;
 #X obj 287 176 * 12;
 #X obj 189 157 unpack f f;
@@ -927,7 +927,7 @@
 #X restore 130 55 graph;
 #N canvas 453 150 450 300 (subpatch) 0;
 #X obj 0 2 vsl 20 60 0 127 0 0 \$0-C1 \$0-C1.r < 7 55 0 10 -262144
--262144 -1 0 0;
+-262144 -1 5900 0;
 #N canvas 0 22 450 300 w 0;
 #N canvas 489 145 872 547 RGB_____________ 0;
 #X obj 243 -28 inlet;
@@ -1324,7 +1324,7 @@
 #X restore 44 49 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X obj 0 2 vsl 15 40 0 127 0 0 \$0-Gb0 \$0-Gb0.r g 5 35 0 10 -1 -1
--262144 3900 0;
+-262144 0 0;
 #N canvas 990 396 253 326 b 0;
 #N canvas 307 177 872 547 RGB_____________ 0;
 #X obj 243 -28 inlet;
@@ -1453,7 +1453,7 @@
 #X restore 81 49 graph;
 #N canvas 358 374 450 300 (subpatch) 0;
 #X obj 0 2 vsl 15 40 0 127 0 0 \$0-Ab0 \$0-Ab0.r h 5 35 0 10 -1 -1
--262144 3900 0;
+-262144 0 0;
 #N canvas 990 396 450 300 b 0;
 #N canvas 307 177 872 547 RGB_____________ 0;
 #X obj 243 -28 inlet;
@@ -1582,7 +1582,7 @@
 #X restore 104 49 graph;
 #N canvas 740 177 450 300 (subpatch) 0;
 #X obj 0 2 vsl 15 40 0 127 0 0 \$0-Bb0 \$0-Bb0.r j 5 35 0 10 -1 -1
--262144 3900 0;
+-262144 0 0;
 #N canvas 990 396 450 300 b 0;
 #N canvas 307 177 872 547 RGB_____________ 0;
 #X obj 243 -28 inlet;
@@ -1737,7 +1737,7 @@
 #X msg 641 252 11 \$1;
 #X msg 691 252 12 \$1;
 #X msg 415 391 set \$1 0;
-#X msg 415 425 10 0;
+#X msg 415 425 12 0;
 #X obj 375 350 list;
 #X obj 375 468 outlet;
 #N canvas 0 22 506 467 filter 0;
@@ -1955,6 +1955,14 @@ empty 0 -8 0 10 -258113 -1 -1 2;
 #X msg 236 -49 127;
 #X msg 271 -62 127;
 #X msg 313 -59 127;
+#X text 15 92 C;
+#X text 35 92 D;
+#X text 55 92 E;
+#X text 75 91 F;
+#X text 95 91 G;
+#X text 115 91 A;
+#X text 135 91 B;
+#X text 155 90 C;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 5 0 52 0;

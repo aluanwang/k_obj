@@ -41,8 +41,8 @@
 #X obj 334 300 msgfile;
 #X obj 334 329 outlet filename;
 #X obj 469 225 t b a;
-#X obj 524 34 t a a;
 #X obj 803 162 outlet;
+#X obj 524 34 t a a b;
 #X connect 0 0 5 0;
 #X connect 1 0 37 0;
 #X connect 2 0 21 0;
@@ -68,7 +68,7 @@
 #X connect 19 1 14 0;
 #X connect 20 0 0 0;
 #X connect 21 0 12 0;
-#X connect 22 0 40 0;
+#X connect 22 0 41 0;
 #X connect 23 0 34 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 1;
@@ -95,8 +95,9 @@
 #X connect 37 0 38 0;
 #X connect 39 0 35 0;
 #X connect 39 1 17 0;
-#X connect 40 0 23 0;
-#X connect 40 1 41 0;
+#X connect 41 0 23 0;
+#X connect 41 1 40 0;
+#X connect 41 2 25 0;
 #X restore -87 108 pd choice-folder;
 #X obj -43 230 f;
 #X obj -18 230 + 1;
@@ -137,7 +138,7 @@
 #X obj 508 33 inlet;
 #X obj 508 66 symbol;
 #X obj 535 117 splitfilename /;
-#X symbolatom 621 140 10 0 0 0 - - -;
+#X symbolatom 621 140 10 0 0 0 - - -, f 10;
 #X obj 508 90 t a a;
 #X obj 192 250 list;
 #X obj 314 478 print;
@@ -190,7 +191,7 @@
 #X msg 239 337 reset \, dimen 500 500 \, create \, 1;
 #X obj -131 471 scale 0.25;
 #X obj -132 346 translateXYZ 0 3.75 0;
-#X floatatom -59 304 5 0 0 0 - - -;
+#X floatatom -59 304 5 0 0 0 - - -, f 5;
 #X obj 49 356 % 8;
 #X obj 49 381 k_range 0 7 -3.5 3.5;
 #X obj -132 257 repeat 100;
@@ -198,7 +199,7 @@
 #X obj 8 452 k_range 0 15 3.75 -3.75;
 #X msg 144 179 4000 4000;
 #X obj -132 498 rectangle 2 1;
-#X floatatom -10 156 5 0 0 0 - - -;
+#X floatatom -10 156 5 0 0 0 - - -, f 5;
 #X obj 7 424 expr int($f1/8);
 #X msg 143 222 dimen \$1 \$2;
 #X obj 167 127 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144

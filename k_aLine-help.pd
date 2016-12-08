@@ -1,9 +1,9 @@
-#N canvas 596 180 814 519 10;
+#N canvas 719 150 814 519 10;
 #X msg 39 45 create \, 1;
 #X obj 39 75 gemwin;
-#X floatatom 322 114 5 0 0 0 distance - -;
-#X floatatom 340 147 5 0 0 1 x-angle - -;
-#X floatatom 357 174 5 0 0 1 z-angle - -;
+#X floatatom 322 114 5 0 0 0 distance - -, f 5;
+#X floatatom 340 147 5 0 0 1 x-angle - -, f 5;
+#X floatatom 357 174 5 0 0 1 z-angle - -, f 5;
 #X msg 19 16 destroy;
 #X obj 117 161 gemhead;
 #X obj 117 200 translateXYZ 0 0 0;
@@ -23,9 +23,10 @@
 #X obj 384 318 unpack f f f;
 #X msg 364 65 3;
 #X obj 288 200 k_aLine 0 0 0 0;
-#X msg 385 291 2.92311 0.674853 0;
+#X msg 385 291 -0.519143 0.703738 1.69804;
 #X obj 383 268 t b a;
 #X msg 387 94 0;
+#X obj 120 3 k_camera;
 #X connect 0 0 1 0;
 #X connect 2 0 23 2;
 #X connect 3 0 23 3;
@@ -59,3 +60,4 @@
 #X connect 25 0 24 0;
 #X connect 25 1 24 0;
 #X connect 26 0 3 0;
+#X connect 27 0 1 0;

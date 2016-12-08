@@ -1,11 +1,11 @@
-#N canvas 140 22 450 300 10;
+#N canvas 497 140 489 437 10;
 #X obj 106 24 inlet~;
 #X obj 73 181 change;
 #X obj 103 117 nbx 5 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 12
--262144 -1 -1 7.54979e-08 256;
+-262144 -1 -1 640.485 256;
 #X obj 106 59 unsig~ 20;
 #X obj 73 209 expr int($f1*1000)/1000;
-#X obj 73 231 outlet;
+#X obj 73 310 outlet;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;

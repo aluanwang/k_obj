@@ -1,0 +1,21 @@
+#N canvas 405 61 531 640 10;
+#X obj 100 58 inlet;
+#X floatatom 65 -107 5 0 0 0 - - -, f 5;
+#X obj 65 -129 r editmode;
+#X obj 65 -87 sel 0 1;
+#X msg 8 -36 color 30 22 22;
+#X obj 8 -61 loadbang;
+#X obj 100 139 outlet;
+#X obj 100 100 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 78 -7 color -1.67261e+07 22 0;
+#X connect 0 0 7 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 3 1 8 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X coords 0 -1 1 1 20 20 2 100 100;

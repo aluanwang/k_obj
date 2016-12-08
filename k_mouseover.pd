@@ -1,11 +1,11 @@
-#N canvas 516 225 724 457 10;
+#N canvas 507 239 842 522 10;
 #X obj 125 29 loadbang;
 #X obj 125 56 t b b b b;
-#X floatatom 211 141 5 0 0 0 - - -;
-#X floatatom 159 192 5 0 0 0 - - -;
-#X floatatom 82 279 5 0 0 0 - - -;
-#X obj 55 3 inlet;
-#X obj 187 2 inlet;
+#X floatatom 211 141 5 0 0 0 - - -, f 5;
+#X floatatom 159 192 5 0 0 0 - - -, f 5;
+#X floatatom 82 279 5 0 0 0 - - -, f 5;
+#X obj 28 4 inlet;
+#X obj 198 4 inlet;
 #X obj -58 39 inlet;
 #X obj 82 308 s \$0-x;
 #X obj 126 277 s \$0-y;
@@ -20,33 +20,33 @@
 #X obj 297 174 >;
 #X obj 300 56 max;
 #X obj 351 57 min;
-#X floatatom 351 79 5 0 0 0 - - -;
-#X floatatom 300 79 5 0 0 0 - - -;
+#X floatatom 351 79 5 0 0 0 - - -, f 5;
+#X floatatom 300 79 5 0 0 0 - - -, f 5;
 #X obj 300 16 t f f;
 #X obj 346 17 t f f;
 #X obj 270 140 t f f;
 #X obj 270 196 <;
 #X obj 270 241 +;
-#X obj 297 198 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 297 198 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 270 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 270 220 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 270 266 5 0 0 0 - - -;
+#X floatatom 270 266 5 0 0 0 - - -, f 5;
 #X obj 439 92 max;
 #X obj 490 93 min;
-#X floatatom 490 115 5 0 0 0 - - -;
-#X floatatom 439 115 5 0 0 0 - - -;
+#X floatatom 490 115 5 0 0 0 - - -, f 5;
+#X floatatom 439 115 5 0 0 0 - - -, f 5;
 #X obj 439 52 t f f;
 #X obj 485 53 t f f;
 #X obj 415 171 >;
 #X obj 388 137 t f f;
 #X obj 388 193 <;
 #X obj 388 238 +;
-#X obj 415 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 415 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 388 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 388 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 389 260 5 0 0 0 - - -;
+#X floatatom 389 260 5 0 0 0 - - -, f 5;
 #X obj 388 113 r \$0-jy;
 #X obj 270 302 +;
 #X obj 270 328 expr if($f1==4 \, 1 \, 0);
@@ -63,9 +63,9 @@
 #X obj 82 248 + \$1;
 #X msg 126 210 0;
 #X obj 126 233 + \$2;
-#X floatatom 126 255 5 0 0 0 - - -;
-#X obj 55 29 unpack f f;
-#X obj 187 29 unpack f f;
+#X floatatom 126 255 5 0 0 0 - - -, f 5;
+#X obj 28 30 unpack f f;
+#X obj 198 31 unpack f f;
 #X connect 0 0 1 0;
 #X connect 1 0 55 0;
 #X connect 1 1 57 0;

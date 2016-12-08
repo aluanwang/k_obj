@@ -1,0 +1,32 @@
+#N canvas 464 214 557 328 10;
+#X obj 100 58 inlet;
+#X obj 134 18 loadbang;
+#X obj 134 44 f \$1;
+#X floatatom 65 -107 5 0 0 0 - - -, f 5;
+#X obj 65 -129 r editmode;
+#X obj 65 -87 sel 0 1;
+#X msg 8 -36 color 30 22 22;
+#X obj 8 -61 loadbang;
+#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 100 139 outlet;
+#X msg 78 -7 color -6.39076e+06 22 0;
+#X obj 198 107 s pd-k_toggle.pd;
+#X obj 273 26 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 264 51 editmode \$1;
+#X msg 392 -10 \; pd editmode 1;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 5 1 10 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 10 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X coords 0 -1 1 1 20 20 2 100 100;
